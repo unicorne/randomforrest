@@ -1,0 +1,47 @@
+2021-06-06 21:11:25,684 - __main__ - INFO - application started
+2021-06-06 21:11:25,685 - __main__ - INFO - Train size: 6000
+2021-06-06 21:11:25,686 - __main__ - INFO - Test size: 1000
+2021-06-06 21:11:25,687 - __main__ - INFO - Tune parameter: False
+2021-06-06 21:11:25,689 - tools - INFO - getting data from mnist_784
+2021-06-06 21:11:48,577 - tools - INFO - split data to train and test set
+2021-06-06 21:11:48,797 - __main__ - INFO - no parameters tuned
+2021-06-06 21:11:48,798 - __main__ - INFO - create and fit model
+2021-06-06 21:11:48,799 - __main__ - INFO - initialize model
+2021-06-06 21:11:48,800 - __main__ - INFO - fitting model on train data
+2021-06-06 21:11:48,955 - __main__ - INFO - Score of model on train set: 0.9983333333333333
+2021-06-06 21:11:48,972 - __main__ - INFO - Score of model on test set: 0.898
+2021-06-06 21:11:50,222 - tools - INFO - Classification Report: 
+2021-06-06 21:11:50,222 - tools - INFO - {'0': {'precision': 0.8773584905660378, 'recall': 0.9789473684210527, 'f1-score': 0.9253731343283582, 'support': 95}, '1': {'precision': 0.9391304347826087, 'recall': 0.9557522123893806, 'f1-score': 0.9473684210526316, 'support': 113}, '2': {'precision': 0.8878504672897196, 'recall': 0.9223300970873787, 'f1-score': 0.9047619047619048, 'support': 103}, '3': {'precision': 0.8928571428571429, 'recall': 0.8695652173913043, 'f1-score': 0.8810572687224669, 'support': 115}, '4': {'precision': 0.8809523809523809, 'recall': 0.8604651162790697, 'f1-score': 0.8705882352941177, 'support': 86}, '5': {'precision': 0.8072289156626506, 'recall': 0.8271604938271605, 'f1-score': 0.8170731707317075, 'support': 81}, '6': {'precision': 0.9764705882352941, 'recall': 0.9021739130434783, 'f1-score': 0.9378531073446328, 'support': 92}, '7': {'precision': 0.9166666666666666, 'recall': 0.9339622641509434, 'f1-score': 0.9252336448598131, 'support': 106}, '8': {'precision': 0.9326923076923077, 'recall': 0.8899082568807339, 'f1-score': 0.9107981220657276, 'support': 109}, '9': {'precision': 0.8541666666666666, 'recall': 0.82, 'f1-score': 0.836734693877551, 'support': 100}, 'accuracy': 0.898, 'macro avg': {'precision': 0.8965374061371476, 'recall': 0.8960264939470501, 'f1-score': 0.8956841703038911, 'support': 1000}, 'weighted avg': {'precision': 0.8988275012136423, 'recall': 0.898, 'f1-score': 0.8978363734220295, 'support': 1000}}
+2021-06-06 21:11:50,226 - tools - INFO - Confusion Report: 
+2021-06-06 21:11:50,227 - tools - INFO - [[93, 0, 0, 0, 0, 1, 1, 0, 0, 0], [0, 108, 2, 1, 0, 1, 0, 0, 0, 1], [1, 1, 95, 4, 1, 0, 0, 1, 0, 0], [1, 0, 2, 100, 0, 6, 0, 2, 4, 0], [1, 1, 1, 1, 74, 0, 0, 2, 0, 6], [5, 1, 0, 3, 0, 67, 1, 1, 2, 1], [3, 0, 3, 0, 1, 2, 83, 0, 0, 0], [0, 2, 0, 0, 0, 0, 0, 99, 0, 5], [1, 2, 2, 0, 3, 3, 0, 0, 97, 1], [1, 0, 2, 3, 5, 3, 0, 3, 1, 82]]
+2021-06-06 21:11:50,267 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-06-06 21:11:50,268 - werkzeug - INFO -  * Running on http://172.18.0.2:5000/ (Press CTRL+C to quit)
+2021-06-06 21:12:20,010 - main - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/app/main.py", line 113, in get_stats
+    return render_template(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.9/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: /app/static/statistics_html_template.html
+2021-06-06 21:12:20,014 - werkzeug - INFO - 172.18.0.1 - - [06/Jun/2021 21:12:20] "[35m[1mGET / HTTP/1.1[0m" 500 -

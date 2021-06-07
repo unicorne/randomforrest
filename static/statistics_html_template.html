@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stats</title>
+</head>
+
+<body>
+    <p>Train Score : {{score_train}}</p>
+    <p>Test Score : {{score_test}}</p>
+    <p>Classification Report: </p>
+    <p>{{classification_report_stats | safe}}</p>
+
+    <p>Confusion Matrix: </p>
+    <img src="{{ url_for('static', filename='confusion_matrix.jpeg') }}" width="400" height="400" alt="start" />
+
+</body>
+
+</html>

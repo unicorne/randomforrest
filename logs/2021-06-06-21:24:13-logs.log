@@ -1,0 +1,7 @@
+2021-06-06 21:24:13,848 - __main__ - INFO - application started
+2021-06-06 21:24:13,849 - __main__ - INFO - Train size: 60000
+2021-06-06 21:24:13,850 - __main__ - INFO - Test size: 10000
+2021-06-06 21:24:13,851 - __main__ - INFO - Tune parameter: True
+2021-06-06 21:24:13,851 - tools - INFO - getting data from mnist_784
+2021-06-06 21:24:36,472 - tools - INFO - split data to train and test set
+2021-06-06 21:24:38,527 - __main__ - INFO - tune parameters

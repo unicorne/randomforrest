@@ -1,0 +1,9 @@
+numpy
+sklearn
+matplotlib
+pandas
+flask
+requests
+pandas
+typing
+

@@ -1,0 +1,51 @@
+2021-06-06 20:41:25,082 - __main__ - INFO - application started
+2021-06-06 20:41:25,082 - __main__ - INFO - Train size: 60000
+2021-06-06 20:41:25,083 - __main__ - INFO - Test size: 10000
+2021-06-06 20:41:25,083 - __main__ - INFO - Tune parameter: False
+2021-06-06 20:41:25,084 - tools - INFO - getting data from mnist_784
+2021-06-06 20:41:47,692 - tools - INFO - split data to train and test set
+2021-06-06 20:41:49,735 - __main__ - INFO - no parameters tuned
+2021-06-06 20:41:49,736 - __main__ - INFO - create and fit model
+2021-06-06 20:41:49,737 - __main__ - INFO - initialize model
+2021-06-06 20:41:49,737 - __main__ - INFO - fitting model on train data
+2021-06-06 20:41:51,303 - __main__ - INFO - Score of model on train set: 0.99905
+2021-06-06 20:41:51,346 - __main__ - INFO - Score of model on test set: 0.945
+2021-06-06 20:42:03,934 - tools - INFO - Classification Report: 
+2021-06-06 20:42:03,935 - tools - INFO - {'0': {'precision': 0.9553656220322887, 'recall': 0.9785992217898832, 'f1-score': 0.9668428640076886, 'support': 1028}, '1': {'precision': 0.9755030621172354, 'recall': 0.9858532272325375, 'f1-score': 0.980650835532102, 'support': 1131}, '2': {'precision': 0.9281437125748503, 'recall': 0.9480122324159022, 'f1-score': 0.9379727685325264, 'support': 981}, '3': {'precision': 0.9210526315789473, 'recall': 0.9276248725790011, 'f1-score': 0.9243270695784662, 'support': 981}, '4': {'precision': 0.9354518371400199, 'recall': 0.9524772497472194, 'f1-score': 0.9438877755511021, 'support': 989}, '5': {'precision': 0.9257950530035336, 'recall': 0.9214536928487691, 'f1-score': 0.9236192714453585, 'support': 853}, '6': {'precision': 0.9588477366255144, 'recall': 0.9618163054695562, 'f1-score': 0.9603297269448737, 'support': 969}, '7': {'precision': 0.9689922480620154, 'recall': 0.9596928982725528, 'f1-score': 0.9643201542912246, 'support': 1042}, '8': {'precision': 0.9456410256410256, 'recall': 0.9056974459724951, 'f1-score': 0.9252383341695936, 'support': 1018}, '9': {'precision': 0.9264555669050051, 'recall': 0.8998015873015873, 'f1-score': 0.9129340714645193, 'support': 1008}, 'accuracy': 0.945, 'macro avg': {'precision': 0.9441248495680435, 'recall': 0.9441028733629503, 'f1-score': 0.9440122871517456, 'support': 10000}, 'weighted avg': {'precision': 0.9449679638275708, 'recall': 0.945, 'f1-score': 0.9448810223338447, 'support': 10000}}
+2021-06-06 20:42:03,966 - tools - INFO - Confusion Report: 
+2021-06-06 20:42:03,967 - tools - INFO - [[1006, 0, 4, 3, 1, 3, 3, 2, 4, 2], [0, 1115, 6, 1, 1, 3, 1, 1, 2, 1], [7, 4, 930, 6, 3, 0, 6, 6, 14, 5], [7, 3, 20, 910, 1, 21, 2, 5, 8, 4], [2, 2, 7, 0, 942, 2, 4, 2, 6, 22], [5, 1, 3, 26, 2, 786, 12, 2, 6, 10], [10, 2, 6, 1, 3, 13, 932, 0, 2, 0], [0, 3, 9, 3, 11, 0, 0, 1000, 0, 16], [8, 8, 9, 23, 10, 14, 11, 1, 922, 12], [8, 5, 8, 15, 33, 7, 1, 13, 11, 907]]
+2021-06-06 20:42:03,974 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-06-06 20:42:03,974 - werkzeug - INFO -  * Running on http://172.18.0.2:5000/ (Press CTRL+C to quit)
+2021-06-06 20:42:36,469 - main - ERROR - Exception on /5 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/app/main.py", line 134, in get_prediction
+    return render_template(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/index_html_template.html", line 11, in top-level template code
+    <img src="{{ url_for('data', filename='tmp.jpeg') }}" width="200" height="200" alt="start" />
+  File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "/usr/local/lib/python3.9/site-packages/werkzeug/routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'data' with values ['filename']. Did you mean 'static' instead?
+2021-06-06 20:42:36,484 - werkzeug - INFO - 172.18.0.1 - - [06/Jun/2021 20:42:36] "[35m[1mGET /5 HTTP/1.1[0m" 500 -
+2021-06-06 20:42:47,760 - werkzeug - INFO - 172.18.0.1 - - [06/Jun/2021 20:42:47] "GET / HTTP/1.1" 200 -
+2021-06-06 20:42:47,799 - werkzeug - INFO - 172.18.0.1 - - [06/Jun/2021 20:42:47] "[33mGET /static/confusion_matrix.jpeg HTTP/1.1[0m" 404 -

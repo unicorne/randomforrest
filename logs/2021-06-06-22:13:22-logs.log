@@ -1,0 +1,23 @@
+2021-06-06 22:13:22,906 - __main__ - INFO - application started
+2021-06-06 22:13:22,908 - __main__ - INFO - Train size: 60000
+2021-06-06 22:13:22,909 - __main__ - INFO - Test size: 10000
+2021-06-06 22:13:22,911 - __main__ - INFO - Tune parameter: True
+2021-06-06 22:13:22,914 - tools - INFO - getting data from mnist_784
+2021-06-06 22:13:47,210 - tools - INFO - split data to train and test set
+2021-06-06 22:13:49,297 - __main__ - INFO - tune parameters
+2021-06-06 22:25:51,706 - __main__ - INFO - Best parameters found via tuning: 
+2021-06-06 22:25:51,708 - __main__ - INFO - {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'n_estimators': 178}
+2021-06-06 22:25:51,709 - __main__ - INFO - create and fit model
+2021-06-06 22:25:51,710 - __main__ - INFO - initialize model
+2021-06-06 22:25:51,711 - __main__ - INFO - fitting model on train data
+2021-06-06 22:28:35,432 - __main__ - INFO - Score of model on train set: 1.0
+2021-06-06 22:28:36,206 - __main__ - INFO - Score of model on test set: 0.9741
+2021-06-06 22:28:49,551 - tools - INFO - Classification Report: 
+2021-06-06 22:28:49,552 - tools - INFO - {'0': {'precision': 0.9838220424671386, 'recall': 0.9858156028368794, 'f1-score': 0.9848178137651822, 'support': 987}, '1': {'precision': 0.9871134020618557, 'recall': 0.9905172413793103, 'f1-score': 0.9888123924268502, 'support': 1160}, '2': {'precision': 0.96875, 'recall': 0.9816138917262512, 'f1-score': 0.9751395230847285, 'support': 979}, '3': {'precision': 0.9721669980119284, 'recall': 0.9616519174041298, 'f1-score': 0.966880869995057, 'support': 1017}, '4': {'precision': 0.9651162790697675, 'recall': 0.9692144373673036, 'f1-score': 0.9671610169491526, 'support': 942}, '5': {'precision': 0.9821627647714605, 'recall': 0.960741548527808, 'f1-score': 0.9713340683572217, 'support': 917}, '6': {'precision': 0.9759519038076152, 'recall': 0.9858299595141701, 'f1-score': 0.9808660624370594, 'support': 988}, '7': {'precision': 0.9742319127849356, 'recall': 0.9694280078895463, 'f1-score': 0.971824023727138, 'support': 1014}, '8': {'precision': 0.9674465920651069, 'recall': 0.9773895169578622, 'f1-score': 0.9723926380368099, 'support': 973}, '9': {'precision': 0.9625984251968503, 'recall': 0.9560117302052786, 'f1-score': 0.9592937714565963, 'support': 1023}, 'accuracy': 0.9741, 'macro avg': {'precision': 0.9739360320236659, 'recall': 0.9738213853808538, 'f1-score': 0.9738522180235798, 'support': 10000}, 'weighted avg': {'precision': 0.9741142143045676, 'recall': 0.9741, 'f1-score': 0.9740816808693024, 'support': 10000}}
+2021-06-06 22:28:49,586 - tools - INFO - Confusion Report: 
+2021-06-06 22:28:49,587 - tools - INFO - [[973, 0, 0, 1, 2, 0, 4, 0, 7, 0], [0, 1149, 3, 0, 3, 3, 0, 1, 0, 1], [1, 1, 961, 5, 1, 0, 1, 6, 3, 0], [0, 0, 12, 978, 1, 7, 1, 8, 7, 3], [4, 3, 0, 0, 913, 0, 3, 2, 0, 17], [1, 2, 0, 10, 0, 881, 13, 3, 4, 3], [3, 3, 1, 0, 1, 4, 974, 0, 2, 0], [1, 1, 7, 1, 8, 0, 0, 983, 2, 11], [3, 3, 6, 3, 2, 1, 1, 0, 951, 3], [3, 2, 2, 8, 15, 1, 1, 6, 7, 978]]
+2021-06-06 22:28:49,597 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-06-06 22:28:49,598 - werkzeug - INFO -  * Running on http://172.18.0.2:5000/ (Press CTRL+C to quit)
+2021-06-06 22:32:57,025 - werkzeug - INFO - 172.18.0.1 - - [06/Jun/2021 22:32:57] "GET / HTTP/1.1" 200 -
+2021-06-06 22:32:57,081 - werkzeug - INFO - 172.18.0.1 - - [06/Jun/2021 22:32:57] "GET /static/confusion_matrix.jpeg HTTP/1.1" 200 -
